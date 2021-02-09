@@ -19,8 +19,14 @@ int main(void) {
 	for (int i = 0; i < n; i++)
 	{
 		fscanf(fp, "%s %d", &((students + i)->name), &((students + i)->score));
-		printf("이름 : %s, 성적 : %d\n", (students + i)->name, (students + i)->score);
 	}
+	for (int i = 0; i < n; i++)
+	{
+		sum += (students + i)->score;
+	}
+	free(students);
+	fclose(fp);
+	printf("점수 평균 : %.2f\n", (double)sum / n);
 	system("pause");
 	return 0;
 }
