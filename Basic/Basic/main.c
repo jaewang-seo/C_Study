@@ -1,7 +1,11 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
+
+/* 18강 파일처리
+#include <stdlib.h>
 #include <string.h>
+
 typedef struct 
 {
 	char name[2];
@@ -30,3 +34,26 @@ int main(void) {
 	system("pause");
 	return 0;
 }
+*/
+
+/*19강 전처리기*/
+#include "temp.h"
+#include "temp.h"
+#define PI 3.14159263535
+#define POW(x) (x * x)
+#define ll long long
+#define ld long double
+
+int main(void) {
+	int r = 10;
+	int x = 10;
+	ll a = 987654321000;
+	ld b = 100.5054;
+	printf("%.1f\n", a * b);
+
+	printf("원의 둘레 : %.2f\n", 2 * r * PI);
+	printf("x의 제곱 : %d ", POW(x));
+	system("pause");
+	return 0;
+}
+
