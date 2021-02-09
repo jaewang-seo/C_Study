@@ -1,3 +1,2 @@
 ﻿  main.c
-c:\users\jeawa\source\repos\c_study\basic\basic\main.c(5): warning C4013: 'system'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
   Basic.vcxproj -> C:\Users\jeawa\source\repos\C_Study\Basic\Debug\Basic.exe
