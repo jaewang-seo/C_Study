@@ -299,6 +299,13 @@ typedef struct {
 	Node *top;
 } Stack;
 
+void push(Stack *stack, int data) {
+	Node *node = (Node*)malloc(sizeof(Node));
+	node->data = data;
+	node->next = stack->top;
+	stack->top = node;
+}
+
 int main(void) {
 
 
