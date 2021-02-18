@@ -1,4 +1,7 @@
 ﻿  main.c
-c:\users\jeawa\source\repos\c_study\basic\basic\main.c(267): warning C4098: 'pop': 'void' 함수에서 값을 반환하고 있습니다.
-c:\users\jeawa\source\repos\c_study\basic\basic\main.c(269): warning C4098: 'pop': 'void' 함수에서 값을 반환하고 있습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(305): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(313): warning C4098: 'pop': 'void' 함수에서 값을 반환하고 있습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(317): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(319): warning C4098: 'pop': 'void' 함수에서 값을 반환하고 있습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(327): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
   Basic.vcxproj -> C:\Users\jeawa\source\repos\C_Study\Basic\Debug\Basic.exe
