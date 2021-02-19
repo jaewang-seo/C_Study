@@ -35,9 +35,8 @@ int main(void) {
 	system("pause");
 	return 0;
 }
-*/
 
-/*19강 전처리기
+19강 전처리기
 #include "temp.h"
 #include "temp.h"
 #define PI 3.14159263535
@@ -57,8 +56,8 @@ int main(void) {
 	system("pause");
 	return 0;
 }
-*/
-/*20강 자료구조
+
+20강 자료구조
 #define INF 10000
 
 int arr[INF];
@@ -105,7 +104,7 @@ int main(void) {
 	return 0;
 }
 
-//연결리스트
+연결리스트
 typedef struct {
 	int data;
 	struct Node *next;
@@ -130,7 +129,7 @@ int main(void) {
 	system("pause");
 	return 0;
 }
-//연결리스트 삽입
+연결리스트 삽입
 
 typedef struct {
 	int data;
@@ -186,8 +185,9 @@ int main(void) {
 	system("pause");
 	return 0;
 }
-*/
-/*22강 양방향 연결 리스트
+
+
+22강 양방향 연결 리스트
 typedef struct {
 	int data;
 	struct Node *prev;
@@ -240,9 +240,9 @@ int main(void) {
 	system("puase");
 	return 0;
 }
-*/
 
-/*23강 스택
+
+23강 스택
 
 #define SIZE 10000
 #define INF 99999999
@@ -342,8 +342,9 @@ int main(void) {
 	system("pause");
 	return 0;
 }
-*/
-/*24강 스택을 활용한 계산기 만들기
+
+
+24강 스택을 활용한 계산기 만들기
 
 typedef struct {
 	char data[100];
@@ -483,6 +484,117 @@ int main(void) {
 	system("pause");
 	return 0;
 }
+
+
+25강 큐
+배열을 이용
+#define SIZE 10000
+#define INF 99999999
+
+int queue[SIZE];
+int front = 0;
+int rear = 0;
+
+int push(int data) {
+	if (rear >= SIZE) {
+		printf("큐 오버플로우\n");
+		return;
+	}
+	queue[rear++] = data;
+}
+
+int pop() {
+	if (front == rear) {
+		printf("큐 언더플로우\n");
+		return -INF;
+	}
+	return queue[front++]; 
+}
+
+void show() {
+	printf("큐의 앞\n");
+	for (int i = front; i < rear; i++) {
+		printf("%d\n", queue[i]);
+	}
+	printf("큐의 뒤\n");
+}
+
+int main(void) {
+	push(1);
+	push(2);
+	push(3);
+	push(4);
+	pop();
+	show();
+	system("pause");
+	return 0;
+}
+
+연결리스트를 이용한 큐
+
 */
+#define INF 99999999
 
+typedef struct {
+	int data;
+	struct Node *next;
+} Node;
 
+typedef struct {
+	Node *front;
+	Node *rear;
+	int count;
+} Queue;
+
+void push(Queue *queue, int data) {
+	Node *node = (Node*)malloc(sizeof(Node));
+	node->data = data;
+	node->next = NULL;
+	if (queue->count == 0) {
+		queue->front = node;
+	}
+	else
+	{
+		queue->rear->next = node;
+	}
+	queue->rear = node;
+	queue->count++;
+}
+
+void pop(Queue *queue) {
+	if (queue->count == 0) {
+		printf("큐 언더플로우");
+		return -INF;
+	}
+	Node *node = queue->front;
+	int data = node->data;
+	queue->front = node->next;
+	free(node);
+	queue->count--;
+	return data;
+}
+
+void show(Queue *queue) {
+	Node *cur = queue->front;
+	printf("큐의 앞\n");
+	while (cur != NULL) {
+		printf("%d\n", cur->data);
+		cur = cur->next;
+	}
+	printf("큐의 뒤\n");
+}
+
+int main(void) {
+	Queue queue;
+	queue.front = queue.rear = NULL;
+	queue.count = 0;
+
+	push(&queue, 1);
+	push(&queue, 2);
+	push(&queue, 3);
+	pop(&queue);
+	show(&queue);
+
+	system("pause");
+	return 0;
+}
