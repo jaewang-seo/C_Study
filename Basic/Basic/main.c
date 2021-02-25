@@ -705,4 +705,126 @@ int main(void) {
 }
 
 
+28강 계수 정렬
+#define MAX_VALUE 10001
+
+int n, m;
+int a[MAX_VALUE];
+
+int main(void) {
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) { scanf("%d", &m); a[m]++; }
+	for (int i = 0; i < MAX_VALUE; i++) {
+		while (a[i] != 0) { printf("%d ", i); a[i]--; }
+	}
+	system("pause");
+	return 0;
+}
+
+29강 기수 정렬
+
+#define MAX 10000
+
+void redixsort(int *a, int n) {
+	int res[MAX], maxValue = 0;
+	int exp = 1;
+	for (int i = 0; i < n; i++) {
+		if (a[i] > maxValue) maxValue = a[i];
+	}
+	while (maxValue / exp > 0) {
+		int bucket[10] = { 0 };
+		//자리수에 대한 index구하기
+		for (int i = 0; i < n; i++) {
+			bucket[a[i] / exp % 10]++;
+		}
+		//누적합 구하기
+		for (int i = 1; i < 10; i++) {
+			bucket[i] += bucket[i - 1];
+		}
+		for (int i = n - 1; i >= 0; i--) {
+			res[--bucket[a[i] / exp % 10]] = a[i];
+		}
+		for (int i = 0; i < n; i++) a[i] = res[i];
+		exp *= 10;
+	}
+}
+
+int main(void) {
+	int a[MAX];
+	int i, n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &a[i]);
+
+	}
+	redixsort(a, n);
+	for (i = 0; i < n; i++) {
+		printf("%d", a[i]);
+	}
+}
+
+30 이진트리 (설명)
+
+31. 이진 트리의 구현 및 순회
+
+포인터를 활용한 이진트리
+
+
+typedef struct {
+	int data;
+	struct Node *leftChild;
+	struct Node *rightChild;
+} Node;
+
+Node *initNode(int data, Node *leftChild, Node *rightChild) {
+	Node *node = (Node*)malloc(sizeof(Node));
+	node->data = data;
+	node->leftChild = leftChild;
+	node->rightChild = rightChild;
+	return node;
+}
+
+void preorder(Node *root) {
+	if (root) {
+		printf("%d ", root->data);
+		preorder(root->leftChild);
+		preorder(root->rightChild);
+	}
+}
+
+void inorder(Node *root) {
+	if (root) {
+		inorder(root->leftChild);
+		printf("%d ", root->data);
+		inorder(root->rightChild);
+	}
+}
+
+void postorder(Node *root) {
+	if (root) {
+		postorder(root->leftChild);
+		postorder(root->rightChild);
+		printf("%d ", root->data);
+	}
+}
+
+
+int main(void) {
+	Node *n7 = initNode(50, NULL, NULL);
+	Node *n6 = initNode(37, NULL, NULL);
+	Node *n5 = initNode(23, NULL, NULL);
+	Node *n4 = initNode(5, NULL, NULL);
+	Node *n3 = initNode(48, n6, n7);
+	Node *n2 = initNode(17, n4, n5);
+	Node *n1 = initNode(30, n2, n3);
+	preorder(n1);
+	printf("\n");
+	inorder(n1);
+	printf("\n");
+	postorder(n1);
+	printf("\n");
+	system("pause");
+	return 0;
+}
+
 */

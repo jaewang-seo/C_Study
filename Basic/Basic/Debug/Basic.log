@@ -1,1 +1,10 @@
-﻿  Basic.vcxproj -> C:\Users\jeawa\source\repos\C_Study\Basic\Debug\Basic.exe
+﻿  main.c
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(783): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(784): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(791): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(792): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(798): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(800): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(806): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(807): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+  Basic.vcxproj -> C:\Users\jeawa\source\repos\C_Study\Basic\Debug\Basic.exe
