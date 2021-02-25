@@ -1,5 +1,1 @@
-﻿  main.c
-c:\users\jeawa\source\repos\c_study\basic\basic\main.c(650): warning C4101: 'index' :참조되지 않은 지역 변수입니다.
-c:\users\jeawa\source\repos\c_study\basic\basic\main.c(650): warning C4101: 'min' :참조되지 않은 지역 변수입니다.
-c:\users\jeawa\source\repos\c_study\basic\basic\main.c(647): warning C4716: 'swap': 값을 반환해야 합니다.
-  Basic.vcxproj -> C:\Users\jeawa\source\repos\C_Study\Basic\Debug\Basic.exe
+﻿  Basic.vcxproj -> C:\Users\jeawa\source\repos\C_Study\Basic\Debug\Basic.exe
