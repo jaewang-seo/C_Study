@@ -1,4 +1,2 @@
 ﻿  main.c
-c:\users\jeawa\source\repos\c_study\basic\basic\main.c(849): warning C4033: 'push'은(는) 값을 반환해야 합니다.
-c:\users\jeawa\source\repos\c_study\basic\basic\main.c(859): warning C4716: 'push': 값을 반환해야 합니다.
   Basic.vcxproj -> C:\Users\jeawa\source\repos\C_Study\Basic\Debug\Basic.exe
