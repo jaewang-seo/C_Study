@@ -1,2 +1,5 @@
 ﻿  main.c
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(995): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(1002): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+c:\users\jeawa\source\repos\c_study\basic\basic\main.c(999): warning C4133: '초기화 중': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
   Basic.vcxproj -> C:\Users\jeawa\source\repos\C_Study\Basic\Debug\Basic.exe
